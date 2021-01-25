@@ -5,7 +5,7 @@
 # Secure the server and the services
 # Apply CIS ssh hardening
 sshd_config='/etc/ssh/sshd_config'
-sudo chown root:root ${sshd_config}						# CIS 5.2.1
+sudo chown root:root ${sshd_config} # CIS 5.2.1
 sudo chmod 600 ${sshd_config}						# CIS 5.2.1
 sudo sed -i "s/\#Protocol/Protocol/" ${sshd_config}				# CIS 5.2.2
 sudo sed -i "s/\#LogLevel/LogLevel/" ${sshd_config}				# CIS 5.2.3
